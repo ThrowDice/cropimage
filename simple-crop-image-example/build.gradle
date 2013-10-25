@@ -1,0 +1,33 @@
+apply plugin: 'android'
+
+dependencies {
+    compile project(':simple-crop-image-lib')
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0"
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 15
+    }
+    sourceSets {
+        main {
+            manifest {
+                srcFile 'AndroidManifest.xml'
+            }
+            java {
+                srcDir 'src'
+            }
+            res {
+                srcDir 'res'
+            }
+            assets {
+                srcDir 'assets'
+            }
+            resources {
+                srcDir 'src'
+            }
+        }
+    }
+}
